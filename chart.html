@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas 图表</title>
+    <script src="js/wtyCharts.js"></script>
+</head>
+<body>
+  <canvas id="test" style="margin: 0 auto; display: block"></canvas>
+
+
+<script>
+
+   new wtychart({
+       canvasId:'test',
+       width:700,
+       height:500,
+       categories: ['2008','2009','2010','2011','2012', '2013', '2014', '2015', '2016', '2017'],
+       showLineBg:true,
+       series: [{
+           name: '成交量1',
+           data: [15, 20, 45, 37, 44, 80,30,50,60,20]
+       }, {
+           name: '成交量2',
+           data: [70, 40, 65, 100, 34, 18,40,30,40,60]
+       }],
+       yAxis: {
+           format: function (val) {
+               return val + '万';
+           }
+       },
+   })
+
+</script>
+</body>
+</html>

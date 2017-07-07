@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>七星彩</title>
+    <script src="js/qxcCharts.js"></script>
+    <style>
+        *{  padding: 0;  margin: 0;}
+        html, body{ width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+
+
+<div style="position: relative;">
+    <canvas id="qxc" style="display: block; margin: 10px auto;position: relative;z-index: 10">不支持canvas，请升级浏览器</canvas>
+    <canvas id="tipsLine">不支持canvas，请升级浏览器</canvas>
+</div>
+
+<div>提示：请先点击，拖动到需要连接的终点松开即可绘线。</div>
+<div>
+    <button id="save">保存图片</button>
+    <button id="scaleAdd">画笔+</button>
+    <button id="scaleReduce">画笔-</button>
+    <button id="clear">清空画板</button>
+    <button id="prev">返回上一步</button>
+    <button id="freeLineBtn">自由线</button>
+    <button id="lock">上锁</button>
+
+</div>
+
+<script>
+    new qxcBoard({
+            id:'qxc',
+            canvas2:'tipsLine',
+            qxcNumber:[
+                {qi:'1777',data:'2,5,4,4,4,4,9'},
+                {qi:'1778',data:'2,5,4,4,4,4,3'},
+                {qi:'1779',data:'2,5,4,4,3,4,0'},
+                {qi:'1780',data:'1,5,4,4,4,4,2'},
+                {qi:'1781',data:'3,5,4,2,4,4,7'},
+                {qi:'1782',data:'3,5,4,2,4,4,9'},
+                {qi:'1783',data:'6,5,4,2,4,4,6'},
+                {qi:'1784',data:'6,5,4,2,4,4,2'},
+                {qi:'1785',data:'6,5,4,2,4,4,9'}
+            ],
+            prev:'prev',
+            lock:'lock',
+            clear:'clear',
+            save:'save',
+            scaleAdd:'scaleAdd',
+            scaleReduce:'scaleReduce',
+            freeLineBtn:'freeLineBtn'
+    })
+</script>
+
+</body>
+</html>
